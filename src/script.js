@@ -170,7 +170,6 @@ function submitExam() {
         if (anyAnswerSelected) {
             checkAnswers();
             submitted = true;
-            document.getElementById("points").textContent = "Final Net Points: " + net;
             submitButton.textContent = "Restart Exam";
             submitButton.onclick = restartExam;
 
@@ -188,6 +187,8 @@ function submitExam() {
 }
 
 function checkAnswers() {
+    let correctAnswers = 0;
+    let incorrectAnswers = 0;
     for (let i = 0; i < questions.length; i++) {
         let radioButtons = document.getElementsByName(`question${i}`);
         let feedback = document.getElementById(`feedback${i}`);
@@ -201,17 +202,19 @@ function checkAnswers() {
                 feedback.textContent = 'Correct!';
                 feedback.className = 'feedback correct';
                 net += 1;
+                correctAnswers++;
             } else {
                 feedback.textContent = `Incorrect! Correct answer: ${correctAnswer}`;
                 feedback.className = 'feedback incorrect';
                 net -= 0.25;
+                incorrectAnswers++;
             }
             radioButtons.forEach(radio => {
                 radio.disabled = true; // Disable each radio button
             });
         }
     }
-    document.getElementById("points").textContent = "Final Net Points: " + net;
+    document.getElementById("points").textContent = "Correct answers: " + correctAnswers + " |" + " Incorrect answers: " + incorrectAnswers + " |" + " Net: " + net + " points";
 }
 
 function scrollFunction() {
