@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Quiz</title>
+</head>
+<body>
+    <div class="file-input-container">
+        <button class="file-input-button" id="questions-button">Select Questions File</button>
+        <input type="file" id="questions-file-input" style="display: none;" />
+        <button class="file-input-button" id="answers-button">Select Answers File</button>
+        <input type="file" id="answers-file-input" style="display: none;" />
+    </div>
+    <h1>Interactive Quiz</h1>
+    <div id="question-container">
+        <!-- Questions will be dynamically inserted here -->
+    </div>
+    <div id="scroll-arrow-up" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <div id="scroll-arrow-down" onclick="scrollToBottom()">
+        <i class="fas fa-arrow-down"></i>
+    </div>
+    <button id="submit-button" onclick="submitExam()" disabled>Submit</button>
+    <p id="points"></p>
+    <script src="script.js"></script>
+</body>
+</html>

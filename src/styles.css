@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    /* user-select: none; /* Prevent text selection */
+    /* -webkit-user-select: none; /* Safari */
+    /* -moz-user-select: none; /* Firefox */
+    /* -ms-user-select: none; /* Internet Explorer/Edge */
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+#question-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.question {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+p {
+    margin: 0 0 10px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="radio"] {
+    margin-right: 5px;
+}
+.feedback {
+    font-weight: bold;
+    margin-top: 5px;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+.clear-answer-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.clear-answer-button:hover {
+    background-color: #0056b3;
+}
+.clear-answer-button:disabled {
+    background-color: #ccc; /* Change background color */
+    color: #666; /* Change text color */
+    cursor: not-allowed; /* Change cursor style */
+}
+#submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius:5px;
+}
+#submit-button:hover {
+    background-color: #0056b3;
+}
+#submit-button:disabled {
+    background-color: #ccc; /* Change background color */
+    color: #666; /* Change text color */
+    cursor: not-allowed; /* Change cursor style */
+}
+#points {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type="radio"]:disabled {
+    cursor: not-allowed; /* Change cursor style */
+}
+#scroll-arrow-up,
+#scroll-arrow-down {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    cursor: pointer;
+    z-index: 9999;
+    color: #007bff; /* Color of the arrows */
+    font-size: 24px; /* Size of the arrows */
+}
+.file-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.file-input-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.file-input-button:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    display: none;
+}
