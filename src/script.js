@@ -270,5 +270,10 @@ function restartExam() {
     feedbacks.forEach(feedback => {
         feedback.textContent = "";
     });
+    const clearButtons = document.querySelectorAll('.clear-answer-button');
+    clearButtons.forEach(button => {
+        button.disabled = false;
+        button.style.display = 'none';
+    });
     scrollToTop();
 }
